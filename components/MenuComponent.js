@@ -24,6 +24,7 @@ class Menu extends Component {
                     key={index}
                     title={item.name}
                     subtitle={item.description}
+                    subtitleStyle={{color: '#17202A'}}
                     hideChevron={true}
                     onPress={() => navigate('Dishdetail', {dishId: item.id})}
                     leftAvatar={{ source: require('./images/uthappizza.png')}}
