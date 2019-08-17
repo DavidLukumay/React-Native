@@ -1,4 +1,4 @@
-export const PROMOTIONS = [
+export const PROMOTIONS3 = [
     {
       id: 0,
       name: 'Weekend Grand Buffet',

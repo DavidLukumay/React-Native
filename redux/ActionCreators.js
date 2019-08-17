@@ -13,17 +13,17 @@ export const fetchComments = () => (dispatch) => {
         }
       },
       error => {
-            var errmess = new Error(error.message);
-            throw errmess;
+            var errMess = new Error(error.message);
+            throw errMess;
       })
     .then(response => response.json())
     .then(comments => dispatch(addComments(comments)))
     .catch(error => dispatch(commentsFailed(error.message)));
 };
 
-export const commentsFailed = (errmess) => ({
+export const commentsFailed = (errMess) => ({
     type: ActionTypes.COMMENTS_FAILED,
-    payload: errmess
+    payload: errMess
 });
 
 export const addComments = (comments) => ({
@@ -46,8 +46,8 @@ export const fetchDishes = () => (dispatch) => {
         }
       },
       error => {
-            var errmess = new Error(error.message);
-            throw errmess;
+            var errMess = new Error(error.message);
+            throw errMess;
       })
     .then(response => response.json())
     .then(dishes => dispatch(addDishes(dishes)))
@@ -58,9 +58,9 @@ export const dishesLoading = () => ({
     type: ActionTypes.DISHES_LOADING
 });
 
-export const dishesFailed = (errmess) => ({
+export const dishesFailed = (errMess) => ({
     type: ActionTypes.DISHES_FAILED,
-    payload: errmess
+    payload: errMess
 });
 
 export const addDishes = (dishes) => ({
@@ -83,8 +83,8 @@ export const fetchPromos = () => (dispatch) => {
         }
         },
         error => {
-            var errmess = new Error(error.message);
-            throw errmess;
+            var errMess = new Error(error.message);
+            throw errMess;
         })
     .then(response => response.json())
     .then(promos => dispatch(addPromos(promos)))
@@ -95,9 +95,9 @@ export const promosLoading = () => ({
     type: ActionTypes.PROMOS_LOADING
 });
 
-export const promosFailed = (errmess) => ({
+export const promosFailed = (errMess) => ({
     type: ActionTypes.PROMOS_FAILED,
-    payload: errmess
+    payload: errMess
 });
 
 export const addPromos = (promos) => ({
@@ -120,8 +120,8 @@ export const fetchLeaders = () => (dispatch) => {
         }
         },
         error => {
-            var errmess = new Error(error.message);
-            throw errmess;
+            var errMess = new Error(error.message);
+            throw errMess;
         })
     .then(response => response.json())
     .then(leaders => dispatch(addLeaders(leaders)))
@@ -132,9 +132,9 @@ export const leadersLoading = () => ({
     type: ActionTypes.LEADERS_LOADING
 });
 
-export const leadersFailed = (errmess) => ({
+export const leadersFailed = (errMess) => ({
     type: ActionTypes.LEADERS_FAILED,
-    payload: errmess
+    payload: errMess
 });
 
 export const addLeaders = (leaders) => ({

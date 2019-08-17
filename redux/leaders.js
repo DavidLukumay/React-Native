@@ -1,6 +1,6 @@
 import * as ActionTypes from './ActionTypes';
 
-export const leaders = (state = {
+export const leaders = (state  = { 
         isLoading: true,
         errMess: null,
         leaders:[]}, action) => {
@@ -12,7 +12,7 @@ export const leaders = (state = {
             return {...state, isLoading: true, errMess: null, leaders: []}
 
         case ActionTypes.LEADERS_FAILED:
-            return {...state, isLoading: false, errMess: action.payload};
+            return {...state, isLoading: false, errMess: action.payload, leaders: []};
 
         default:
           return state;

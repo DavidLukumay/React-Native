@@ -1,4 +1,4 @@
-export const LEADERS = [
+export const LEADERS3 = [
     {
       id: 0,
       name: 'Peter Pan',
