@@ -10,7 +10,8 @@ class Reservation extends Component {
         this.state = {
             guests: 1,
             smoking: false,
-            date: ''
+            date: '',
+            showModal: false
         }
     }
 
