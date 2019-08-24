@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, FlatList } from 'react-native';
+import { View, FlatList,Alert,Text } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
@@ -35,7 +35,24 @@ const mapDispatchToProps = dispatch => ({
                 {
                     text: 'Delete',
                     type: 'delete',
-                    onPress: () => this.props.deleteFavorite(item.id)
+                    onPress: () => {
+                        Alert.alert(
+                            'Delete Favorite',
+                            'Are you sure you want to delete the favorites dish' + item.name + ' ?',
+                            [
+                                {
+                                    text: 'Cancel',
+                                    onPress: () => console.log(item.name + ' Not deleted'),
+                                    style: 'cancel'
+                                },
+                                {
+                                    text: 'OK',
+                                    onPress: () => this.props.deleteFavorite(item.id)
+                                }
+                            ],
+                            { cancelable: false }
+                        );
+                    }
                 }
             ];
     
