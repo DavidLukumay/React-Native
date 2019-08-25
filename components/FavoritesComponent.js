@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch => ({
                     onPress: () => {
                         Alert.alert(
                             'Delete Favorite',
-                            'Are you sure you want to delete the favorites dish' + item.name + ' ?',
+                            'Are you sure you want to delete the favorites dish ' + item.name + ' ?',
                             [
                                 {
                                     text: 'Cancel',
