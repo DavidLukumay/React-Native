@@ -29,6 +29,13 @@ const mapStateToProps = state => {
             return false;
       };
 
+      const cardDrag = ({ dx }) => {
+        if (dx > 200) 
+        return true;
+          else
+        return false;
+      };
+
       const panResponder = PanResponder.create({
           onStartShouldSetPanResponder: (e, gestureState) => {
               return true;
@@ -54,7 +61,10 @@ const mapStateToProps = state => {
                             }
                         ],
                         { cancelable: false}
-                    )
+                    );
+                    else if(cardDrag(gestureState)){
+                        openCommentForm();
+                    }   
               return true;
           }
       });

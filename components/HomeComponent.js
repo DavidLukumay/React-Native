@@ -105,7 +105,7 @@ class Home extends Component {
                         errMess={this.props.promotions.errMess} />
                 </Animated.View>
 
-                        <Animated.View style={{ width: '100%', transform: [{translateX: xpos3}]}}>
+                <Animated.View style={{ width: '100%', transform: [{translateX: xpos3}]}}>
                     <RenderItem 
                         item={this.props.leaders.leaders.filter((leader) => leader.featured)[0]} 
                         isLoading={this.props.leaders.isLoading} 
