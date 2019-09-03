@@ -1,10 +1,18 @@
 import React, {Component} from 'react';
-import { Card } from 'react-native-elements';
+import { Card,Icon,Button } from 'react-native-elements';
 import { Text,StyleSheet,View,ScrollView } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-
+import * as MailComposer from 'expo-mail-composer';
 
 class Contact extends Component{
+
+  sendMail() {
+    MailComposer.composeAsync({
+      recipients: ['confusion@food.net'],
+      subject: 'Enquiry',
+      body: 'To who it may concern'
+    })
+  }
     static navigationOptions = {
       title: 'Contact Us'
     };
@@ -20,6 +28,12 @@ class Contact extends Component{
                       <Text style={styles.paragraph}>Tel: +852 1234 5678</Text> 
                       <Text style={styles.paragraph}>Fax: +852 8765 4321</Text>
                       <Text style={styles.paragraph}>Email:confusion@food.net</Text>
+                      <Button
+                        title="Send Email"
+                        buttonStyle={{backgroundColor: "#512DA8"}}
+                        icon={<Icon name='envelope-o' type='font-awesome' color='white' />}
+                        onPress={this.sendMail}
+                      />
                   </Card>
                 </Animatable.View>
             </ScrollView>
@@ -27,12 +41,7 @@ class Contact extends Component{
         );
     }
 }
-// Hii haikua ya lazima kwenye quiz1 ni kwa ajili ya kujifunzia tuu.
 
-/** <<Text>> zote zenye style pamoja na <<VIEW>> 
- * havikua viki hitajika kwenye quiz1
- * ni kwa ajili ya kujifunzia tuu.
- */
 const styles = StyleSheet.create({
     container: {
       justifyContent: 'center',
