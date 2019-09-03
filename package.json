@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "expo": "^34.0.1",
+    "expo-permissions": "~6.0.0",
     "expo-secure-store": "~6.0.0",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
