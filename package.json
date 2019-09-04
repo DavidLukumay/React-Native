@@ -10,6 +10,7 @@
   "dependencies": {
     "expo": "^34.0.1",
     "expo-asset": "~6.0.0",
+    "expo-calendar": "~6.0.0",
     "expo-image-manipulator": "~6.0.0",
     "expo-image-picker": "~6.0.0",
     "expo-mail-composer": "~6.0.0",
