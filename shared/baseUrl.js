@@ -1,4 +1,4 @@
-export  const baseUrl = 'http://192.168.42.26:3001/';
+export  const baseUrl = 'http://192.168.43.44:3001/'; //**minor**
 
 /** to make this work to your application
  * run the json server with the following command

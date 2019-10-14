@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "eslint": "^6.4.0",
     "expo": "^34.0.1",
     "expo-asset": "~6.0.0",
     "expo-calendar": "~6.0.0",

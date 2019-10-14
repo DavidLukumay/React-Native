@@ -237,7 +237,7 @@ class DishDetail extends Component {
                             placeholder="Author"
                             leftIcon={
                                 <Icon 
-                                    name='user'
+                                    name='user-o'
                                     type='font-awesome'
                                 />
                             }
@@ -247,7 +247,7 @@ class DishDetail extends Component {
                             placeholder="Comment"
                             leftIcon={
                                 <Icon 
-                                    name='comment'
+                                    name='comment-o'
                                     type='font-awesome'
                                 />
                             }
